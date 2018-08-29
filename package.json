@@ -15,7 +15,10 @@
     "test": "jest",
     "test.watch": "jest --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@polymer/lit-element": "^0.5.2",
+    "@webcomponents/webcomponentsjs": "^2.1.1"
+  },
   "devDependencies": {
     "@stencil/core": "^0.11.0",
     "@types/jest": "^23.3.1",

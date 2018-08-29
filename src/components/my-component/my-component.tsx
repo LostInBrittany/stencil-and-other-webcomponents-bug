@@ -1,4 +1,7 @@
-import { Component, Prop } from '@stencil/core';
+import { Component } from '@stencil/core';
+
+import '../../../non-stencil-components/my-vanilla-element';
+import '../../../non-stencil-components/my-vanilla-element-with-shadowdom';
 
 @Component({
   tag: 'my-component',
@@ -6,14 +9,12 @@ import { Component, Prop } from '@stencil/core';
   shadow: true
 })
 export class MyComponent {
-
-  @Prop() first: string;
-  @Prop() last: string;
-
   render() {
     return (
       <div>
-        Hello, World! I'm {this.first} {this.last}
+        <div>Let's illustrate the bug with a quick example:</div>
+        <div><my-vanilla-element></my-vanilla-element></div>   
+        <div><my-vanilla-element-with-shadowdom></my-vanilla-element-with-shadowdom></div>
       </div>
     );
   }
